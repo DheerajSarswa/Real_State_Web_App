@@ -13,7 +13,7 @@ st. title('Analytics App')
 
 st.header('Sector-Price per sqft GEO-MAP')
 
-new_df = pd.read_csv('/Users/dhirajsarswa/Documents/Real-State-Web/data_viz1.csv')
+new_df = pd.read_csv('/Users/dhirajsarswa/Documents/Real-State-Web/Datasets/data_viz1.csv')
 group_df = new_df.groupby('sector')[['price','price_per_sqft','built_up_area','latitude','longitude']].mean()
 
 
@@ -25,7 +25,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 st.header('Features Wordcloud')
-feature_text = pickle.load(open("/Users/dhirajsarswa/Documents/Real-State-Web/feature_text.pkl",'rb'))
+feature_text = pickle.load(open("/Users/dhirajsarswa/Documents/Real-State-Web/Datasets/feature_text.pkl",'rb'))
 wordcloud = WordCloud(width = 800, height = 800,
                       background_color ='black',
                       stopwords = set(['s']),  # Any stopwords you'd like to exclude

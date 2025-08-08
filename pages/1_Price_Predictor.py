@@ -5,7 +5,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Gurgaon Price Predictor")
 
-with open('/Users/dhirajsarswa/Documents/Real-State-Web/df.pkl', 'rb') as file:
+with open('/Users/dhirajsarswa/Documents/Real-State-Web/Datasets/df.pkl', 'rb') as file:
       df = pickle.load(file)
 
 with open('/Users/dhirajsarswa/Documents/Real-State-Web/pipeline.pkl', 'rb') as file:
